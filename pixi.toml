@@ -1,0 +1,23 @@
+[project]
+authors = ["amamiya-len <yuanhang.zhao@timeplus.io>"]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "PoC-template"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[activation.env]
+GOPATH = "$CONDA_PREFIX" # make go binary can be installed in the right path
+
+[activation]
+scripts = ["setup.sh"]
+
+[tasks]
+# too simple to use for definition of complex tasks, use justfile instead and use just to run tasks.
+# Just command can be wrapped to run tasks easier
+
+
+[dependencies]
+just = ">=1.36.0,<2"
+go = ">=1.23.2,<2"
+uv = ">=0.4.30,<0.5"
